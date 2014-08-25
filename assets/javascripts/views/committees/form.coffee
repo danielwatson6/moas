@@ -25,7 +25,7 @@ class Moas.Views.CommitteeForm extends Backbone.View
     callback = (model) =>
       # Router listens for this event
       @trigger 'committeeSaved', model.id()
-    @committees.create committeeData, success: 
+    @committees.create committeeData, success: callback
   
   render: ->
     @$el.html @template()
