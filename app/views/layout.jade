@@ -1,0 +1,85 @@
+doctype html
+html
+  head
+    title CEP MOAS
+    meta(content='width=device-width, initial-scale=1.0' name='viewport')
+    != css('main')
+    
+  body
+    #content.moas-header.hidden-xs
+      .container
+        .media
+          a.pull-left(href='#')
+            img.media-object(src='/images/logo.png')
+          .media-body
+            h1 Colegio Episcopal de Panam&aacute;
+            p.lead Model Organization of American States
+            p.lead 25-26 September 2014
+    nav.navbar.navbar-default
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button' data-toggle='collapse' data-target='#collapse1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        #collapse1.collapse.navbar-collapse
+          ul.nav.navbar-nav.nav-justified
+            li
+              a(href='#') Home
+            li
+              a(href='#about') About
+            li.dropdown
+              a.dropdown-toggle(href='#' data-toggle='dropdown')
+                span Committees
+                b.caret
+              ul#committees-nav.dropdown-menu
+            
+            li.dropdown
+              a.dropdown-toggle(href='#' data-toggle='dropdown')
+                span Conference 2014
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='#hotel') Hotel Information
+                li
+                  a(href='#schedule') Schedule
+                li
+                  a(href='#dates') Important Dates
+                li
+                  a(href='#preparation') Preparation
+            li.dropdown
+              a.dropdown-toggle(href='#' data-toggle='dropdown')
+                span Previous Summit
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='#the-view') The View
+                li
+                  a(href='#gallery') Gallery
+            li
+              a(href='#contact') Contact Us
+          
+    #app.container
+    
+    br
+    
+    #footer.moas-footer
+      .container
+        .row
+          .col-md-3
+            h4 Contact Information
+            a(href='mailto:moascep@gmail.com') moascep@gmail.com
+          .col-md-3
+            h4 CEPMOAS Links
+            ul
+              li
+                a(href='http://twitter.com/cepmoas') Twitter
+              li
+                a(href='https://www.facebook.com/CEPdebate') Facebook
+              li
+                a(href='http://instagram.com/cepdebateclub') Instagram
+    
+    != js('main')
+    script.
+      Moas.committees = new Moas.Collections.Committees(!{committees})

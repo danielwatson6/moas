@@ -1,0 +1,38 @@
+h1 New Committee
+hr
+form
+  .row
+    .col-md-6
+      h3 Committee information
+      .form-group
+        label Committee name
+        input#name.form-control(type='text' placeholder='Committee name' required)
+      .form-group
+        label Topic description
+        textarea#topic.form-control(placeholder='Topic description' required)
+      .form-group
+        label Chairs description
+        textarea#chairs.form-control(placeholder='Chairs description' required)
+    .col-md-6
+      h3 Co-chair 1
+      .form-group
+        label Chair name
+        input#chair1_name.form-control(type='text' placeholder='Chair name' required)
+      .form-group
+        label Chair email
+        input#chair1_email.form-control(type='email' placeholder='Chair email' required)
+      .form-group
+        label Picture URL
+        input#chair1_url.form-control(type='text' placeholder='Picture URL' required)
+      br
+      h3 Co-chair 2
+      .form-group
+        label Chair name
+        input#chair2_name.form-control(type='text' placeholder='Chair name' required)
+      .form-group
+        label Chair email
+        input#chair1_email.form-control(type='email' placeholder='Chair email' required)
+      .form-group
+        label Picture URL
+        input#chair2_url.form-control(type='text' placeholder='Picture URL' required)
+  button#save.btn.btn-lg.btn-danger.save-btn Create committee
