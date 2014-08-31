@@ -1,5 +1,5 @@
 express       = require 'express'
-favicon       = require 'static-favicon'
+favicon       = require 'serve-favicon'
 morgan        = require 'morgan'
 cookieParser  = require 'cookie-parser'
 bodyParser    = require 'body-parser'
