@@ -1,4 +1,4 @@
-class Moas.Views.StaticView extends Backbone.View
+class Moas.StaticView extends Backbone.View
   
   initialize: (options) ->
     @template = options.template

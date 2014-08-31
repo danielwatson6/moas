@@ -1,7 +1,6 @@
 //= require_tree ./vendor
 
-.hide
-  display none
+// Header
 
 .moas-header
   background-color #f00
@@ -21,8 +20,17 @@
     padding-left 40px
     border-left 1px solid #fff
 
-.moas-error
-  color: red
+.navbar-nav.nav-justified li
+  float none
+
+// Footer
+
+html
+  position relative
+  min-height 100%
+
+body
+  margin-bottom 140px
 
 .moas-footer
   position absolute
@@ -37,15 +45,7 @@
   a
     color #999
 
-html
-  position relative
-  min-height 100%
-
-body
-  margin-bottom 140px
-
-.navbar-nav.nav-justified li
-  float none
+// Homepage
 
 .carousel-wrap
   border-radius 5px
@@ -60,16 +60,28 @@ body
   margin-left auto
   margin-right auto
 
+// Static views
+
+.schedule table
+  margin-bottom 40px
+
 img.the-view
   width 100%
 
-.form-control
-  border-radius 0
+// Committees
 
-.save-btn
-  margin-top 20px
-  border-radius 5px
-  width 100%
-  color #fff
-  background-image linear-gradient(to bottom, #ff534f 0%, #d92e2a 100%)
-    
+.nav-pills
+  a
+    color #555
+  li.active a, li.active a:hover
+    color #fff
+    background-color #d9534f
+    border-color #d43f3a
+
+.chair-pic
+  &:first-child img
+    float left
+  img
+    margin 10px
+    margin-left 0
+    max-width 45%

@@ -33,8 +33,7 @@ html
               a.dropdown-toggle(href='#' data-toggle='dropdown')
                 span Committees
                 b.caret
-              ul#committees-nav.dropdown-menu
-            
+                include committees
             li.dropdown
               a.dropdown-toggle(href='#' data-toggle='dropdown')
                 span Conference 2014
@@ -81,5 +80,3 @@ html
                 a(href='http://instagram.com/cepdebateclub') Instagram
     
     != js('main')
-    script.
-      Moas.committees = new Moas.Collections.Committees(!{committees})

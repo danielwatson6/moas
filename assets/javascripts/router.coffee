@@ -1,64 +1,36 @@
 class Moas.Router extends Backbone.Router
   
-  initialize: (committees) ->
-    @committees = committees
-    Backbone.history.start()
+  routes:
+    ''                 : 'homeView'
+    'committees/:name' : 'committeeView'
+    'about'            : 'staticView'
+    'hotel'            : 'staticView'
+    'schedule'         : 'staticView'
+    'dates'            : 'staticView'
+    'preparation'      : 'staticView'
+    'the-view'         : 'staticView'
+    'gallery'          : 'staticView'
+    'contact'          : 'staticView'
+  
+  homeView: ->
+    @currentView = new Moas.StaticView
+      template: JST['static/home']
+    @setCurrentView @currentView
+  
+  committeeView: (name) ->
+    @currentView = new Moas.CommitteeView
+      name: name
+    @setCurrentView @currentView
+  
+  staticView: ->
+    # Create the template path based on URL hashtag
+    name = window.location.hash.slice 1
+    templatePath = 'static/' + name
+    # Render passing the template path
+    @currentView = new Moas.StaticView
+      template: JST[templatePath]
+    @setCurrentView @currentView
   
   setCurrentView: (view) ->
     # Override the page's content
     $('#app').html view.render().el
-  
-  routes:
-    ''                    : 'setStaticView'
-    'committees'          : 'committeesIndex'
-    'committees/new'      : 'committeesNew'
-    'committees/:id'      : 'committeesShow'
-    'committees/:id/edit' : 'committeesEdit'
-    'about'               : 'setStaticView'
-    'hotel'               : 'setStaticView'
-    'schedule'            : 'setStaticView'
-    'dates'               : 'setStaticView'
-    'preparation'         : 'setStaticView'
-    'the-view'            : 'setStaticView'
-    'gallery'             : 'setStaticView'
-    'contact'             : 'setStaticView'
-  
-  setStaticView: ->
-    # Create the template path based on URL hashtag
-    name = window.location.hash.slice 1
-    templatePath = 'static/' + (name or 'home')
-    # Render and pass the template path
-    @currentView = new Moas.Views.StaticView
-      template: JST[templatePath]
-    @setCurrentView @currentView
-  
-  committeesIndex: ->
-    # TODO: Only grant access to admin
-    @currentView = new Moas.Views.CommitteeIndex
-      collection: @committees
-      childTemplate: JST['committees/row']
-    @setCurrentView @currentView
-  
-  committeesNew: ->
-    # TODO: Only grant access to admin
-    @currentView = new Moas.Views.CommitteeForm @committees
-    @setCurrentView @currentView
-    @listenTo @currentView, 'committeeSaved', @showCommittee
-  
-  committeesShow: (id) ->
-    @currentView = new Moas.Views.Committee
-      model: @committees.get id
-      template: JST['committees/show']
-    @setCurrentView @currentView
-  
-  committeesEdit: (id) ->
-    # TODO: Only grant access to admin
-    # TODO: Make CommitteeForm view accept single committee
-    @currentView = new Moas.Views.CommitteeForm @committees.get id
-    @setCurrentView @currentView
-    @listenTo @currentView, 'committeeSaved', @showCommittee
-  
-  # Methods
-  
-  showCommittee: (id) =>
-    @navigate 'committees/' + id, trigger: true
