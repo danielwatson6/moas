@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-var app = require('../config/app');
+var app = require('/config/app');
 
 var port = process.env.PORT || 3000;
 app.set('port', port);
