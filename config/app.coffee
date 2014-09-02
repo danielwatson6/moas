@@ -12,7 +12,7 @@ expressCoffee = require '../lib/express-coffee'
 # App setup
 app = express()
 
-app.use favicon()
+#app.use favicon()
 app.use morgan 'dev'
 app.use bodyParser()
 app.use cookieParser()
