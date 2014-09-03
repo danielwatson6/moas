@@ -1,7 +1,6 @@
 # Project
 *.log
 node_modules/
-public/
 js/
 
 # OS X
