@@ -25,16 +25,18 @@ html
             span.icon-bar
         #collapse1.collapse.navbar-collapse
           ul.nav.navbar-nav.nav-justified
-            li
+            li#tab-home
               a(href='#') Home
-            li
+            li#tab-about
               a(href='#about') About
-            li.dropdown
+            li
+              a(href='#pupusa') Conference Updates
+            li#tab-committees.dropdown
               a.dropdown-toggle(href='#' data-toggle='dropdown')
                 span Committees
                 b.caret
                 include committees
-            li.dropdown
+            li#tab-conference.dropdown
               a.dropdown-toggle(href='#' data-toggle='dropdown')
                 span Conference 2014
                 b.caret
@@ -45,9 +47,7 @@ html
                   a(href='#schedule') Schedule
                 li
                   a(href='#dates') Important Dates
-                li
-                  a(href='#preparation') Preparation
-            li.dropdown
+            li#tab-previous.dropdown
               a.dropdown-toggle(href='#' data-toggle='dropdown')
                 span Previous Summit
                 b.caret
