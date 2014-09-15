@@ -1,1 +1,17 @@
-h1 hi
+.carousel-wrap
+    #carousel1.carousel.slide(data-ride='carousel')
+      ol.carousel-indicators
+        each i in [0,1,2,3,4]
+          li(data-target='#carousel1' data-slide-to=i)
+      .carousel-inner
+        each i in [1,2,3,4,5]
+          if i == 1
+            .item.active
+              img(src='/images/carousel/'+i+'.jpg')
+          else
+            .item
+              img(src='/images/carousel/'+i+'.jpg')
+      a.left.carousel-control(href='#carousel1' data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left
+      a.right.carousel-control(href='#carousel1' data-slide='next')
+        span.glyphicon.glyphicon-chevron-right
