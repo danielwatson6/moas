@@ -95,7 +95,7 @@ window.Moas =
         'josi'
       ]
     hemispheric:
-      title: "Inter-American Committee on Hemispheric Security"
+      title: "Inter-American Commission on Hemispheric Security"
       topic: "The prevalence of human trafficking in Latin America and the Caribbean"
       topicBio: [
         "Human trafficking is an issue that has a profound impact in almost every country in the world, leaving scars that affect us all. Crime and terrorism epitomize the essence of human trafficking. This topic is relevant for almost every American country so we expect the participation of every one of you. There are many topics that need to be discussed in order to stop the spread of this transnational crime, (for example, the inducement of these victims to forced labor). Forced labor is any work or service which people are forced to do against their own will under the threat of some form punishment.  Almost all slavery practices, including trafficking in peoples and bonded labor, contain some element of forced labor. Also, the trafficking of women and children for sexual exploitation is a high-profit, low-risk trade for those who organize it, but it is detrimental to the millions of women and children exploited in slavery-like conditions in the global sex industry. Sex trafficking is more than an issue of crime or migration; it is a threat to human rights, a manifestation of persistent gender inequality and the subordinate status of women globally. A question that rises immediately after studying a case of human trafficking is how these people are able to transport their victims from one place to another without the proper documentation or by means of false documents.  Unfortunately, each day more human rights are violated than people are saved. This means action needs to be taken immediately, and our future lies in your hands."
@@ -110,7 +110,7 @@ window.Moas =
         'elena'
       ]
     mcmfa:
-      title: "Meeting of Consultaion of Ministers of Public Security"
+      title: "Meeting of Consultation of Ministers of Public Security"
       topic: "Civilian Militias and Vigilante Groups in the Americas"
       topicBio: [
         "The act of lynching, the practice in which a mob takes the law into its own hands in order to injure and kill a person accused of some wrongdoing, was characteristic of a dark period in the past when the predominant institution of justice was the people themselves. Recently, the phenomenon has been resurging in the Latin American region, where the levels of mob violence have risen in the last couple of years. The perpetrators call it justicia popular or mob justice, as it is their direct response to the inefficiency of the public security and judicial institutions in the region."
